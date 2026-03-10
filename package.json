@@ -1,0 +1,43 @@
+{
+  "name": "clawdex-cloudflared",
+  "version": "2.0.1",
+  "private": true,
+  "homepage": "https://github.com/ropepop/clawdex-cloudflared#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ropepop/clawdex-cloudflared.git"
+  },
+  "bin": {
+    "clawdex": "./bin/clawdex.js"
+  },
+  "workspaces": [
+    "apps/*",
+    "services/*"
+  ],
+  "scripts": {
+    "mobile": "./scripts/start-expo.sh mobile",
+    "ios": "./scripts/start-expo.sh ios",
+    "android": "./scripts/start-expo.sh android",
+    "mac:host": "npm run -w @codex/mac-host dev",
+    "bridge": "BRIDGE_WORKDIR=$(pwd) npm run -w @codex/rust-bridge dev",
+    "setup:wizard": "./scripts/setup-wizard.sh",
+    "stop:services": "./scripts/stop-services.sh",
+    "secure:setup": "./scripts/setup-secure-dev.sh",
+    "secure:bridge": "./scripts/start-bridge-secure.sh",
+    "secure:bridge:dev": "BRIDGE_RUN_MODE=dev ./scripts/start-bridge-secure.sh",
+    "bridge:ts": "BRIDGE_WORKDIR=$(pwd) npm run -w @codex/mac-bridge dev",
+    "version:sync": "node scripts/sync-versions.js",
+    "build": "npm run --workspaces build",
+    "typecheck": "npm run --workspaces typecheck",
+    "lint": "npm run --workspaces lint",
+    "test": "npm run test -w @codex/mac-bridge && npm run test -w apps/mobile && npm run test -w @codex/rust-bridge",
+    "teardown": "./scripts/teardown.sh"
+  },
+  "dependencies": {
+    "@types/react": "~19.2.10",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-native": "0.83.2",
+    "expo": "^55.0.2"
+  }
+}

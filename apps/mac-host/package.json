@@ -1,0 +1,13 @@
+{
+  "name": "@codex/mac-host",
+  "version": "2.0.1",
+  "private": true,
+  "scripts": {
+    "prepare:bridge": "./scripts/prepare-bundled-bridge.sh",
+    "dev": "npm run prepare:bridge && swift run ClawdexHost",
+    "build": "npm run prepare:bridge && swift build",
+    "typecheck": "swift build",
+    "lint": "swift build",
+    "test": "swift test"
+  }
+}

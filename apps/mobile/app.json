@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Clawdex Cloudflared",
+    "slug": "clawdex-cloudflared",
+    "version": "2.0.1",
+    "userInterfaceStyle": "dark",
+    "orientation": "portrait",
+    "icon": "./assets/brand/app-icon.png",
+    "splash": {
+      "image": "./assets/brand/splash-icon-white.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Clawdex Cloudflared uses the camera to scan bridge pairing QR codes.",
+        "NSMicrophoneUsageDescription": "Clawdex Cloudflared uses the microphone for voice-to-text input.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "usesCleartextTraffic": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/brand/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/brand/favicon.png"
+    },
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "experiments": {
+      "reactCompiler": true
+    },
+    "jsEngine": "hermes",
+    "plugins": [
+      "./plugins/withAndroidCleartextTraffic",
+      "expo-audio"
+    ]
+  }
+}

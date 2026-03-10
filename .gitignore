@@ -1,0 +1,82 @@
+# Dependencies
+node_modules/
+*.tgz
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.yarn-integrity
+.pnp.*
+
+# TypeScript build artifacts
+**/dist/
+*.tsbuildinfo
+**/target/
+
+# Expo / React Native
+.expo/
+.expo-shared/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Metro bundler
+.metro-health-check*
+
+# iOS
+/ios/
+/apps/mobile/ios/
+ios/Pods/
+ios/*.xcworkspace
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+*.hmap
+*.ipa
+DerivedData/
+build/
+.build/
+
+# Android
+/android/
+/apps/mobile/android/
+android/app/build/
+android/build/
+android/.gradle/
+*.apk
+*.aab
+local.properties
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.log
+*.pid
+*.seed
+.claude/
+.clawdex-mobile-attachments/
+/app.json
+export-cheat-sheet.local.md
+apps/mac-host/Sources/ClawdexHost/Resources/Bundled/codex-rust-bridge
